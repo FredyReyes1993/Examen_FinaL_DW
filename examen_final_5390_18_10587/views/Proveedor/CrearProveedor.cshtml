@@ -1,0 +1,41 @@
+﻿
+@model examen_final_5390_18_10587.models.ProveedorModels
+
+<h1>Módulo Creacion De Proveedor</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ConsultaProveedores">
+            <!-- Se solicita el nombre del proveedor-->
+            <div class="form-group">
+                <label asp-for="NombreProveedor" class="control-label"></label>
+                <input asp-for="NombreProveedor" class="form-control" />
+                <span asp-validation-for="NombreProveedor" class="text-danger"></span>
+            </div>
+            <!-- Se solicita la direccion del proveedor-->
+            <div class="form-group">
+                <label asp-for="DireccionProducto" class="control-label"></label>
+                <input asp-for="DireccionProducto" class="form-control" />
+                <span asp-validation-for="DireccionProducto" class="text-danger"></span>
+            </div>
+            <!-- Se solicita el telefono del proveedor-->
+            <div class="form-group">
+                <label asp-for="Telefonoproveedor" class="control-label"></label>
+                <input asp-for="Telefonoproveedor" class="form-control" />
+                <span asp-validation-for="Telefonoproveedor" class="text-danger"></span>
+            </div>
+            <!-- Se solicita el nombre del producto-->
+            <div class="form-group">
+                <label asp-for="ProveedorProducto" class="control-label"></label>
+                <input asp-for="ProveedorProducto" class="form-control" />
+                <span asp-validation-for="ProveedorProducto" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>

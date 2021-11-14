@@ -1,0 +1,59 @@
+﻿@model IEnumerable<examen_final_5390_18_10587.models.ProductoModels>
+
+@{ 
+    ViewData["Title"] = "Productos";
+
+ }
+
+<h1> Módulo Principal Productos</h1>
+<p>
+    <a asp-action="ConsultaProducto">Crear Producto</a>
+    <a asp-action="CrearProducto">Consultar Producto</a>
+    <a asp-action="ListarProducto">Listar Producto</a>
+</p>
+
+<table class="table">
+     <thead>
+         <tr>
+             <th>
+                 @Html.DisplayNameFor(Model => Model.NombreProducto)
+             </th>
+             <th>
+                 @Html.DisplayNameFor(Model => Model.ProveedorProducto)
+             </th>
+             <th>
+                 @Html.DisplayNameFor(Model => Model.CantidadProducto)
+             </th>
+             <th>
+                 @Html.DisplayNameFor(Model => Model.PrecioProducto)
+             </th>
+             <th>
+                 @Html.DisplayNameFor(Model => Model.EstadoProducto)
+             </th>
+         </tr>
+
+     </thead>
+    <tbody>
+        @foreach(var registros in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => registros.NombreProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => registros.ProveedorProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => registros.CantidadProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => registros.PrecioProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => registros.EstadoProducto)
+            </td>
+        </tr>
+            }
+    </tbody>
+</table>
+

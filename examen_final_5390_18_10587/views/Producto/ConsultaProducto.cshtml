@@ -1,0 +1,41 @@
+﻿
+@model examen_final_5390_18_10587.models.ProductoModels
+
+<h1>Módulo Creacion Producto</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ConsultaProducto">
+            <!-- Se solicita el nombre del producto-->
+            <div class="form-group">
+                <label asp-for="NombreProducto" class="control-label"></label>
+                <input asp-for="NombreProducto" class="form-control" />
+                <span asp-validation-for="NombreProducto" class="text-danger"></span>
+            </div>
+            <!-- Se solicita el nombre del proveedor-->
+            <div class="form-group">
+                <label asp-for="ProveedorProducto" class="control-label"></label>
+                <input asp-for="ProveedorProducto" class="form-control" />
+                <span asp-validation-for="ProveedorProducto" class="text-danger"></span>
+            </div>
+            <!-- Se solicita la cantidad del producto-->
+            <div class="form-group">
+                <label asp-for="CantidadProducto" class="control-label"></label>
+                <input asp-for="CantidadProducto" class="form-control" />
+                <span asp-validation-for="CantidadProducto" class="text-danger"></span>
+            </div>
+            <!-- Se solicita el precio del producto-->
+            <div class="form-group">
+                <label asp-for="PrecioProducto" class="control-label"></label>
+                <input asp-for="PrecioProducto" class="form-control" />
+                <span asp-validation-for="PrecioProducto" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary"/>
+            </div>
+
+        </form>
+    </div>
+</div>
